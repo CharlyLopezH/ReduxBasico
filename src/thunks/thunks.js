@@ -10,7 +10,7 @@ export const getPokemons  = ( page = 0 ) => {
         // const data = await resp.json();
         //Mejor usar AXIOS en lgar de fetch
         const { data } = await pokemonApi.get(`/pokemon?limit=10&offset=${ page * 10 }`);
-        console.log(data.name);
+        console.log(data);
         dispatch( setPokemons({ pokemons: data.results, page: page + 1 }) );
     }
 }
