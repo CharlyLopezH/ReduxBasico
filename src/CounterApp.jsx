@@ -5,7 +5,8 @@ export const CounterApp=()=> {
 
 
     //"theCounter viene del store, se accede por medio del selector"
-    const count=useSelector((state)=>state.theCounter.value)
+    //=>state+objetoStore+objetoslice
+    const count=useSelector((state)=>state.theCounter.counter)
     const dispatch=useDispatch();
 
     return (
